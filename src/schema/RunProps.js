@@ -18,7 +18,7 @@ export default function RunProps($el) {
     style: Val($el('w:rStyle')),
     isBold: Bool($el('w:b')),
     isItalic: Bool($el('w:i')),
-    strike: Bool($el('w:strike')),
+    isStrike: Bool($el('w:strike')),
     highlight: Val($el('w:highlight')),
     spacing: Val($el('w:spacing')),
     size: Val($el('w:sz')),

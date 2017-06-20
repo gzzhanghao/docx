@@ -9,7 +9,6 @@ export default function Hyperlink($el) {
     id: $el.attr('r:id'),
     children: $el.map({
       'w:r': Run,
-      'w:hyperlink': Hyperlink,
       'w:commentRangeStart': CommentStart,
       'w:commentRangeEnd': CommentEnd,
     }),

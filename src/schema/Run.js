@@ -1,6 +1,8 @@
 import Break from './Break'
 import CommentEnd from './CommentEnd'
 import CommentStart from './CommentStart'
+import FieldChar from './FieldChar'
+import FieldCode from './FieldCode'
 import Image from './Image'
 import RunProps from './RunProps'
 import Tab from './Tab'
@@ -15,6 +17,8 @@ export default function Run($el) {
       'w:tab': Tab,
       'w:br': Break,
       'w:drawing': Image,
+      'w:fldChar': FieldChar,
+      'w:instrText': FieldCode,
       'w:commentRangeStart': CommentStart,
       'w:commentRangeEnd': CommentEnd,
     }),
