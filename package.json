@@ -5,7 +5,8 @@
   "main": "lib",
   "scripts": {
     "build": "babel src -d lib",
-    "watch": "babel src -d lib --watch"
+    "watch": "babel src -d lib --watch",
+    "prepare": "npm run build"
   },
   "author": "Jason <jason.daurus@gmail.com>",
   "license": "MIT",

@@ -4,7 +4,7 @@ import parseXML from 'xml-parser'
 import format from './format'
 
 export default async function parse(buffer) {
-  const result = {
+  const docx = {
 
     zip: await Zip.loadAsync(buffer),
 
@@ -28,12 +28,12 @@ export default async function parse(buffer) {
     },
   }
 
-  Object.assign(result, {
-    relations: await result.parseFile('word/_rels/document.xml.rels', true),
-    document: await result.parseFile('word/document.xml', true),
-    comments: await result.parseFile('word/comments.xml'),
-    styles: await result.parseFile('word/styles.xml'),
+  Object.assign(docx, {
+    relations: await docx.parseFile('word/_rels/document.xml.rels', true),
+    document: await docx.parseFile('word/document.xml', true),
+    comments: await docx.parseFile('word/comments.xml'),
+    styles: await docx.parseFile('word/styles.xml'),
   })
 
-  return result
+  return docx
 }
