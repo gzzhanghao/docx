@@ -38,7 +38,7 @@ export default function ParagraphProps($el) {
     spacing: Spacing($el('w:spacing')),
     indent: Indent($el('w:ind')),
     runProps: RunProps($el('w:rPr')),
-    sectionProps: RunProps($el('w:sectPr')),
+    sectionProps: SectionProps($el('w:sectPr')),
   }
 }
 

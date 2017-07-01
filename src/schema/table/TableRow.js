@@ -1,5 +1,5 @@
-import CommentEnd from './CommentEnd'
-import CommentStart from './CommentStart'
+import CommentEnd from '../CommentEnd'
+import CommentStart from '../CommentStart'
 import TableCell from './TableCell'
 import TableRowProps from './TableRowProps'
 

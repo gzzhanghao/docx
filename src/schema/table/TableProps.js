@@ -1,7 +1,7 @@
-import Val from './common/Val'
-import Border from './common/Border'
-import TableSize from './table/TableSize'
-import CellMargin from './table/CellMargin'
+import Val from '../common/Val'
+import Border from '../common/Border'
+import TableSize from './TableSize'
+import CellMargin from './CellMargin'
 
 export const TableAlign = {
   left: 'left',

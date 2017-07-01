@@ -1,9 +1,9 @@
 import Bool from './common/Bool'
 import ParagraphProps from './ParagraphProps'
 import RunProps from './RunProps'
-import TableCellProps from './TableCellProps'
-import TableProps from './TableProps'
-import TableRowProps from './TableRowProps'
+import TableCellProps from './table/TableCellProps'
+import TableProps from './table/TableProps'
+import TableRowProps from './table/TableRowProps'
 import Val from './common/Val'
 
 export const StyleType = {

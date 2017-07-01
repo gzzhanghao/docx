@@ -1,4 +1,4 @@
-import Val from './common/Val'
+import Val from '../common/Val'
 import Level from './Level'
 
 export default function AbstractNumber($el) {

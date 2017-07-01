@@ -1,5 +1,5 @@
 import Level from './Level'
-import Val from './common/Val'
+import Val from '../common/Val'
 
 export default function Number($el) {
   return $el && {

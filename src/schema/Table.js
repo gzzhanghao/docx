@@ -1,7 +1,7 @@
 import CommentEnd from './CommentEnd'
 import CommentStart from './CommentStart'
-import TableProps from './TableProps'
-import TableRow from './TableRow'
+import TableProps from './table/TableProps'
+import TableRow from './table/TableRow'
 
 export default function Table($el) {
   if (!$el) {

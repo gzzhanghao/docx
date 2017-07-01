@@ -1,7 +1,7 @@
-import CommentEnd from './CommentEnd'
-import CommentStart from './CommentStart'
-import Paragraph from './Paragraph'
-import Table from './Table'
+import CommentEnd from '../CommentEnd'
+import CommentStart from '../CommentStart'
+import Paragraph from '../Paragraph'
+import Table from '../Table'
 import TableCellProps from './TableCellProps'
 
 export default function TableCell($el) {

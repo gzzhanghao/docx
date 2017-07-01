@@ -1,3 +1,6 @@
+/**
+ * @return {boolean}
+ */
 export default function Bool($el) {
   if (!$el) {
     return $el

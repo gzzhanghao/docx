@@ -1,7 +1,7 @@
-import Border from './common/Border'
-import CellMargin from './table/CellMargin'
-import TableSize from './table/TableSize'
-import Val from './common/Val'
+import Val from '../common/Val'
+import Border from '../common/Border'
+import CellMargin from './CellMargin'
+import TableSize from './TableSize'
 
 export const TableCellMergeType = {
   continue: 'continue',

@@ -1,6 +1,6 @@
-import Val from './common/Val'
-import RunProps from './RunProps'
-import ParagraphProps from './ParagraphProps'
+import Val from '../common/Val'
+import RunProps from '../RunProps'
+import ParagraphProps from '../ParagraphProps'
 
 export const NumberFormat = {
   decimal: 'decimal',                                           // Decimal Numbers

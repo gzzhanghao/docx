@@ -1,5 +1,5 @@
 export default function FieldCode($el) {
-  return {
+  return $el && {
     type: 'FieldCode',
     content: $el.content,
   }

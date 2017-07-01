@@ -1,5 +1,5 @@
-import Bool from './common/Bool'
-import TableSize from './table/TableSize'
+import Bool from '../common/Bool'
+import TableSize from './TableSize'
 
 export const HeightRule = {
   auto: 'auto',

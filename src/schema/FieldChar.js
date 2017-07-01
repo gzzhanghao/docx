@@ -5,7 +5,7 @@ export const FieldCharType = {
 }
 
 export default function FieldChar($el) {
-  return {
+  return $el && {
     type: 'FieldChar',
     charType: $el.attr('w:fldCharType'),
   }

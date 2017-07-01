@@ -1,5 +1,5 @@
-import AbstractNumber from './AbstractNumber'
-import Number from './Number'
+import AbstractNumber from './numbering/AbstractNumber'
+import Number from './numbering/Number'
 
 export default function Numbering($el) {
   return $el && {

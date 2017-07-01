@@ -1,7 +1,7 @@
 export default function Relationships($el) {
   return $el && {
     type: 'Relationships',
-    list: $el.map({
+    relationships: $el.map({
       'Relationship': Relationship,
     }),
   }
@@ -11,7 +11,7 @@ export function Relationship($el) {
   return $el && {
     type: 'Relationship',
     id: $el.attr('Id'),
-    type: $el.attr('Type'),
+    relType: $el.attr('Type'),
     target: $el.attr('Target'),
   }
 }
