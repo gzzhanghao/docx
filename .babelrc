@@ -1,4 +1,9 @@
 {
-  presets: [['env', { targets: { node: 'current' } }]],
-  plugins: ['transform-async-to-generator'],
+  presets: [
+    ['env', { targets: { node: 'current' } }],
+  ],
+  plugins: [
+    'transform-async-to-generator',
+    'transform-object-rest-spread',
+  ],
 }
