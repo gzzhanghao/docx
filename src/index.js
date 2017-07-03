@@ -1,5 +1,5 @@
 import Zip from 'jszip'
-import parseXML from 'xml-parser'
+import parseXML from './parseXML'
 
 import format from './format'
 import Schema from './schema'
@@ -22,7 +22,7 @@ export default async function parse(buffer, schema = Schema) {
       const content = await this.readFile(path, 'string')
 
       if (content) {
-        return format(parseXML(content).root, schema)
+        return format(await parseXML(content), schema)
       }
 
       if (force) {

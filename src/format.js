@@ -1,11 +1,6 @@
-import { XmlEntities } from 'html-entities'
-
-const entities = new XmlEntities
-const decode = content => content && entities.decode(content)
-
 export default function format(element, schema) {
 
-  let listChildren = schema[element.name] || {}
+  let listChildren = schema[element['#name']] || {}
   if (Array.isArray(listChildren)) {
     listChildren = { $children: listChildren }
   }
@@ -20,23 +15,23 @@ export default function format(element, schema) {
   }
 
   const result = {
-    $type: element.name,
-    $content: decode(element.content),
+    $type: element['#name'],
+    $content: element._,
   }
 
-  for (const key of Object.keys(element.attributes)) {
-    result[`@${key}`] = decode(element.attributes[key])
+  for (const key of Object.keys(element.$ || {})) {
+    result[`@${key}`] = element.$[key]
   }
 
   for (const key of listKey) {
     result[key] = []
   }
 
-  for (const child of element.children) {
-    if (listMap[child.name]) {
-      result[listMap[child.name]].push(format(child, schema))
+  for (const child of element.$$ || []) {
+    if (listMap[child['#name']]) {
+      result[listMap[child['#name']]].push(format(child, schema))
     } else {
-      result[child.name] = format(child, schema)
+      result[child['#name']] = format(child, schema)
     }
   }
 
