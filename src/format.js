@@ -7,7 +7,7 @@ export default function format(element, schema) {
 
   let listChildren = schema[element.name] || {}
   if (Array.isArray(listChildren)) {
-    listChildren = { children: listChildren }
+    listChildren = { $children: listChildren }
   }
 
   const listKey = Object.keys(listChildren)
