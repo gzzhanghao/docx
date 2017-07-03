@@ -32,6 +32,7 @@ export default {
     'w:fldChar',
     'w:instrText',
     'w:drawing',
+    'w:pict',
     ...ranges,
   ],
 

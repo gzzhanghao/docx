@@ -1,6 +1,6 @@
 {
-  "name": "docx",
-  "version": "0.1.0",
+  "name": "@gzzhanghao/docx",
+  "version": "0.1.1",
   "description": "",
   "main": "lib",
   "scripts": {
