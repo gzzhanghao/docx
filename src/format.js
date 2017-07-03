@@ -1,4 +1,8 @@
+import { XmlEntities } from 'html-entities'
 import Schema from './schema'
+
+const entities = new XmlEntities
+const decode = content => content && entities.decode(content)
 
 export default function parse(element) {
 
@@ -18,11 +22,11 @@ export default function parse(element) {
 
   const result = {
     $type: element.name,
-    $content: element.content,
+    $content: decode(element.content),
   }
 
   for (const key of Object.keys(element.attributes)) {
-    result[`@${key}`] = element.attributes[key]
+    result[`@${key}`] = decode(element.attributes[key])
   }
 
   for (const key of listKey) {
