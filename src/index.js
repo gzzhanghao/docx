@@ -2,8 +2,11 @@ import Zip from 'jszip'
 import parseXML from 'xml-parser'
 
 import format from './format'
+import DEFAULT_SCHEMA from './schema'
 
-export default async function parse(buffer) {
+parse.DEFAULT_SCHEMA = DEFAULT_SCHEMA
+
+async function parse(buffer, schema = DEFAULT_SCHEMA) {
   const docx = {
 
     zip: await Zip.loadAsync(buffer),
@@ -19,7 +22,7 @@ export default async function parse(buffer) {
       const content = await this.readFile(path, 'string')
 
       if (content) {
-        return format(parseXML(content).root)
+        return format(parseXML(content).root, schema)
       }
 
       if (force) {
@@ -37,3 +40,6 @@ export default async function parse(buffer) {
 
   return docx
 }
+
+// Workaround for https://github.com/babel/babylon/issues/257
+export default parse

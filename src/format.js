@@ -1,12 +1,11 @@
 import { XmlEntities } from 'html-entities'
-import Schema from './schema'
 
 const entities = new XmlEntities
 const decode = content => content && entities.decode(content)
 
-export default function parse(element) {
+export default function format(element, schema) {
 
-  let listChildren = Schema[element.name] || {}
+  let listChildren = schema[element.name] || {}
   if (Array.isArray(listChildren)) {
     listChildren = { children: listChildren }
   }
@@ -35,9 +34,9 @@ export default function parse(element) {
 
   for (const child of element.children) {
     if (listMap[child.name]) {
-      result[listMap[child.name]].push(parse(child))
+      result[listMap[child.name]].push(format(child, schema))
     } else {
-      result[child.name] = parse(child)
+      result[child.name] = format(child, schema)
     }
   }
 
