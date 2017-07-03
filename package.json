@@ -1,7 +1,7 @@
 {
   "name": "@gzzhanghao/docx",
   "version": "0.1.2",
-  "description": "",
+  "description": "A dead simple docx parser.",
   "main": "lib",
   "scripts": {
     "build": "babel src -d lib",
@@ -19,5 +19,16 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.2"
   },
-  "false": {}
+  "false": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzzhanghao/docx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gzzhanghao/docx/issues"
+  },
+  "homepage": "https://github.com/gzzhanghao/docx#readme"
 }
