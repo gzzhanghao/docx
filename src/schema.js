@@ -33,7 +33,12 @@ export default {
     'w:instrText',
     'w:drawing',
     'w:pict',
+    'mc:AlternateContent',
     ...ranges,
+  ],
+
+  'mc:AlternateContent': [
+    'mc:Choice',
   ],
 
   'w:hyperlink': [
