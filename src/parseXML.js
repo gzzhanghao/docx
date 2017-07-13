@@ -1,10 +1,11 @@
-import { parseString } from 'xml2js'
+import { parseString } from '@gzzhanghao/xml2js'
 
 const PARSER_OPTIONS = {
   explicitRoot: false,
   explicitChildren: true,
   includeWhiteChars: true,
   preserveChildrenOrder: true,
+  saxOptions: { parseEntities: false },
 }
 
 export default function parseXML(string) {

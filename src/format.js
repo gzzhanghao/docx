@@ -1,3 +1,5 @@
+import { decodeXML } from 'entities'
+
 export default function format(element, schema) {
 
   let listChildren = schema[element['#name']] || {}
@@ -16,11 +18,11 @@ export default function format(element, schema) {
 
   const result = {
     $type: element['#name'],
-    $content: element._,
+    $content: decodeXML(element._),
   }
 
   for (const key of Object.keys(element.$ || {})) {
-    result[`@${key}`] = element.$[key]
+    result[`@${key}`] = decodeXML(element.$[key])
   }
 
   for (const key of listKey) {
