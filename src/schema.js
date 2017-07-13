@@ -41,6 +41,8 @@ export default {
     'mc:Choice',
   ],
 
+  'w:txbxContent': contents,
+
   'w:hyperlink': [
     'w:r',
     'w:hyperlink',

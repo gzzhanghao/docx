@@ -1,6 +1,6 @@
 {
   "name": "@gzzhanghao/docx",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A dead simple docx parser.",
   "main": "lib",
   "scripts": {
