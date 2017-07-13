@@ -41,6 +41,21 @@ export default {
     'mc:Choice',
   ],
 
+  'w:pict': [
+    'v:shape',
+    'v:group',
+  ],
+
+  'v:group': [
+    'v:shape',
+    'v:group',
+  ],
+
+  'v:shape': [
+    'v:textbox',
+    'v:imagedata',
+  ],
+
   'w:txbxContent': contents,
 
   'w:hyperlink': [
